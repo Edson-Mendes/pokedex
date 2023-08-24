@@ -27,17 +27,31 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
 
-    <!-- CSS Details -->
-    <link rel="stylesheet" href="assets/css/pokemon-details.css" />
+    <!-- CSS Global-->
+    <link rel="stylesheet" href="assets/css/global.css" />
     <!-- CSS Pokedex-->
     <link rel="stylesheet" href="assets/css/pokedex.css" />
+    <!-- CSS Details -->
+    <link rel="stylesheet" href="assets/css/pokemon-details.css" />
   </head>
-  <body>
+  <body class="grass">
     <div class="topbar grass">
       <a href="http://127.0.0.1:5500/pokedex/index.html">
         <i class="material-icons">arrow_back</i>
       </a>
       <button id="favoriteButton" class="icon-button"><i class="material-icons">favorite_border</i></button>
+    </div>
+
+    <div class="basicInfo">
+      <div class="nameTypeInfo">
+        <span class="nameInfo">Bulbasaur</span>
+        <ol class="listTypeInfo">
+          <li class="typeInfo grass">grass</li>
+          <li class="typeInfo poison">poison</li>
+        </ol>
+      </div>
+
+      <span class="numberInfo">#1</span>
     </div>
 
     <script src="assets/js/pokemon-details.js"></script>
