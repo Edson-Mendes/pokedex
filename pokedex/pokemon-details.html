@@ -39,8 +39,11 @@
       <a href="http://127.0.0.1:5500/pokedex/index.html">
         <i class="material-icons topbar__icon">arrow_back</i>
       </a>
-      <button id="favorite-button-js" class="topbar__icon-button"><i class="material-icons topbar__icon">favorite_border</i></button>
+      <button id="favorite-button-js" class="topbar__icon-button">
+        <i class="material-icons topbar__icon">favorite_border</i>
+      </button>
     </div>
+
     <div class="info">
       <div class="info__basic">
         <div class="info__basic__name-type">
@@ -54,8 +57,20 @@
         <span class="info__basic__number">#1</span>
       </div>
 
-      <img class="info__img" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" 
-          alt="">
+      <img 
+        class="info__img"
+        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+        alt=""
+      />
+    </div>
+
+    <div class="details">
+      <ol class="details__titles">
+        <li class="details__titles__title details__titles__title--selected">About</li>
+        <li class="details__titles__title">Base stats</li>
+        <li class="details__titles__title">Evolution</li>
+        <li class="details__titles__title">Movies</li>
+      </ol>
     </div>
 
     <script src="assets/js/pokemon-details.js"></script>
