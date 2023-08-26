@@ -1,7 +1,8 @@
 const pokemonList = document.getElementById("pokemonList");
 const loadMoreButton = document.getElementById("loadMoreButton");
+const pokemons = document.getElementsByClassName("pokemons");
 
-const limit = 5;
+const limit = 1;
 let offset = 0;
 
 const maxRecords = 151;
@@ -11,7 +12,7 @@ function loadPokemonItems(offset, limit) {
     const newHtml = pokemons
       .map((pokemon) => {
         return `
-      <li class="pokemon ${pokemon.type}">
+      <li id="${pokemon.name}" class="pokemon ${pokemon.type}">
         <span class="number">#${pokemon.number}</span>
         <span class="name">${pokemon.name}</span>
         <div class="detail">
@@ -31,6 +32,11 @@ function loadPokemonItems(offset, limit) {
       .join("");
 
     pokemonList.innerHTML += newHtml;
+
+    pokemons.forEach((pokemon) => {
+      const pokemonItem = document.getElementById(pokemon.name);
+      pokemonItem.addEventListener("click", () => goToPokemonDetails(pokemon));
+    });
   });
 }
 
@@ -49,3 +55,9 @@ loadMoreButton.addEventListener("click", () => {
     loadPokemonItems(offset, limit);
   }
 });
+
+function goToPokemonDetails(pokemon) {
+  const params = new URLSearchParams();
+  params.append('pokemon', pokemon.name);
+  location.href = `http://127.0.0.1:5500/pokedex/pokemon-details.html?${params.toString()}`;
+}

@@ -1,5 +1,9 @@
-const favoriteButton = document.getElementById('favoriteButton');
+const favoriteButton = document.getElementById('favorite-button-js');
+
+const key = 'pokemon';
+const pokemonName = new URLSearchParams(window.location.search).get(key);
+
 
 favoriteButton.addEventListener('click', () => {
-  console.log('o botão de favoritos foi clicado!');
+  console.log(`o pokemon ${pokemonName} foi favoritado!!!`);
 });
