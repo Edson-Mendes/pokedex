@@ -16,7 +16,4 @@ class About {
   height;
   weight;
   abilities = [];
-  genderRatio;
-  eggGroups;
-  eggCycle;
 }
