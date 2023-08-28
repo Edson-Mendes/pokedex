@@ -7,12 +7,25 @@ const key = "pokemon";
 const pokemonName = new URLSearchParams(window.location.search).get(key);
 
 favoriteButton.addEventListener("click", () => {
-  console.log(`o pokemon ${pokemonName} foi favoritado!!!`);
+  if (isFavorite(favoriteButton)) {
+    favoriteButton.innerHTML = '<i class="material-icons topbar__icon">favorite_border</i>'
+  } else {
+    favoriteButton.innerHTML = '<i class="material-icons topbar__icon topbar__icon--selected">favorite</i>'
+  }
 });
 
 pokeApi.getPokemonByName(pokemonName).then((pokemonDetails) => {
   generateHTML(pokemonDetails);
 });
+
+/**
+ * Verifica se o elemento HTML contém a class 'topbar__icon--selected'.
+ */
+function isFavorite(button) {
+  const icon = button.firstElementChild;
+
+  return icon.classList.contains('topbar__icon--selected');
+}
 
 /**
  * Gera o HTML dos detalhes do Pokemon.

@@ -14,6 +14,10 @@ body {
   font-size: 36px;
 }
 
+.topbar__icon--selected {
+  color: red;
+}
+
 .topbar__icon-button {
   background: none;
   border: none;
