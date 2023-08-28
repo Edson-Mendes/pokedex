@@ -2,7 +2,7 @@ const pokemonList = document.getElementById("pokemonList");
 const loadMoreButton = document.getElementById("loadMoreButton");
 const pokemons = document.getElementsByClassName("pokemons");
 
-const limit = 1;
+const limit = 10;
 let offset = 0;
 
 const maxRecords = 151;
@@ -59,5 +59,6 @@ loadMoreButton.addEventListener("click", () => {
 function goToPokemonDetails(pokemon) {
   const params = new URLSearchParams();
   params.append('pokemon', pokemon.name);
-  location.href = `http://127.0.0.1:5500/pokedex/pokemon-details.html?${params.toString()}`;
+  let host = location.origin;
+  location.href = host.concat(`/pokedex/pokemon-details.html?${params.toString()}`);
 }

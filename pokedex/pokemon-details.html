@@ -36,16 +36,15 @@
   </head>
   <body id="body-js" class="grass">
     <div class="topbar">
-      <a href="http://127.0.0.1:5500/pokedex/index.html">
+      <button id="go-back-button-js" class="topbar__icon-button">
         <i class="material-icons topbar__icon">arrow_back</i>
-      </a>
+      </button>
       <button id="favorite-button-js" class="topbar__icon-button">
         <i class="material-icons topbar__icon">favorite_border</i>
       </button>
     </div>
 
-    <div id="info-js" class="info">
-    </div>
+    <div id="info-js" class="info"></div>
 
     <div class="details">
       <ol class="details__titles">
@@ -56,9 +55,8 @@
         <li class="details__titles__title">Evolution</li>
         <li class="details__titles__title">Moves</li>
       </ol>
-      
-      <div id="details-js" class="details__content">
-      </div>
+
+      <div id="details-js" class="details__content"></div>
     </div>
 
     <script src="assets/js/pokemon-model.js"></script>

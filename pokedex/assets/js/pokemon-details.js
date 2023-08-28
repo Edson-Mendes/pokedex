@@ -1,4 +1,5 @@
 const favoriteButton = document.getElementById("favorite-button-js");
+const goBackButton = document.getElementById("go-back-button-js");
 const pokemonInfo = document.getElementById("info-js");
 const body = document.getElementById("body-js");
 const details = document.getElementById('details-js');
@@ -13,6 +14,11 @@ favoriteButton.addEventListener("click", () => {
     favoriteButton.innerHTML = '<i class="material-icons topbar__icon topbar__icon--selected">favorite</i>'
   }
 });
+
+goBackButton.addEventListener('click', () => {
+  let host = location.origin;
+  location.href = host.concat(`/pokedex/index.html`);
+})
 
 pokeApi.getPokemonByName(pokemonName).then((pokemonDetails) => {
   generateHTML(pokemonDetails);
