@@ -13,4 +13,14 @@ O objetivo do curso é aprender e práticar conseitos do desenvolvimento web, es
 
 O projeto desenvolvido é uma pokedex com design inspirado nesse [layout](https://dribbble.com/shots/6540871-Pokedex-App) e utilizando a [PokeApi](https://pokeapi.co/) para fornecer as informações dos pokemons.
 
-Após a conclusão do curso deverá ser implementado como desafio uma tela de detalhes de pokemon.
+## :pushpin: Desafio DIO
+
+O Desafio da [DIO](https://web.dio.me/home) era implementar a tela de detalhes do Pokemon, consumindo as informações fornecidas pela PokeAPI.
+
+Segue abaixo o resultado até o momento.
+
+<img src="./info/images/pokedex01.gif" alt="GIF da tela da pokedex implementado."/>
+
+## :gear: Atualizações futuras
+- [ ] Implementar as abas Base stats, Evolution e Moves.
+- [ ] Deixar a tela responsiva para outros tamanhos.
